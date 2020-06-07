@@ -23,13 +23,28 @@
 				font-size: 30px;
 			}
 			
-			#number {
-				height: 60px;
-				width: 400px;
-				font-size: 24px;
-				line-height: 28px;
-				margin-bottom: 20px;
+			#number {		
+			  width: 400px;			
 			}
+	    
+	    #prefix {
+	    	width: 50px; 
+		    margin-right: 10px;
+	    }
+	    
+	    #num-container {
+		    display: flex;
+		    margin-bottom: 20px;
+		    width: 100%;
+		    justify-content: center;
+		    align-items: center;
+	    }
+	    
+	    #num-container input {
+		    height: 60px;		
+		font-size: 24px;
+		line-height: 28px;		
+	    }
     </style>
 </head>
 
@@ -39,7 +54,10 @@
 
   <h2>WhatsApp Message Helper</h2>
   
-  <input id="number" value="05" tabindex="0" />
+	<div id="num-container">
+		<input id="prefix" value="972" tabindex="1"/>
+  		<input id="number" value="05" tabindex="0" />
+	</div>
   <button id="start">Start</button>
 </main>
 
