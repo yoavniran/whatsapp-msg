@@ -67,9 +67,11 @@
 	(() => {
   
 		document.getElementById("start").addEventListener("click", () => {
+			const prefix = document.getElementById("prefix");
 			const num = document.getElementById("number");
-			if (num.value){
-				window.open(`https://api.whatsapp.com/send?phone=${num.value}`)
+			
+			if (prefix.value && num.value){
+				window.open(`https://api.whatsapp.com/send?phone=+${prefix.value}${num.value}`)
 			}
 		});		
   })();
