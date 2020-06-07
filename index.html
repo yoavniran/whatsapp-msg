@@ -46,6 +46,12 @@
 <script>
 	(() => {
   
+		document.getElementById("start").addEventListener("click", () => {
+			const num = document.getElementById("number");
+			if (num.value){
+				window.open(`https://api.whatsapp.com/send?phone=${num}`
+			}
+		});		
   })();
 </script>
 </body>
