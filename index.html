@@ -145,7 +145,7 @@
 			const num = document.getElementById("number");		
 
 			if (prefix.value && num.value){
-				const cleanNum = num.value.replace(/^0/, "");
+				const cleanNum = num.value.replace(/^0/, "").replace(/-/, "");
 				window.open(`https://wa.me/${prefix.value}${cleanNum}`);
 			}
 		};
