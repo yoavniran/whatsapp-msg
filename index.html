@@ -220,12 +220,15 @@
 				const text = document.getElementById("msgText").value;
 				
 				window.open(`https://${webOnly.checked ? "web" : "api"}.whatsapp.com/send?phone=${prefix.value}${cleanNum}&text=${text}`);
-
-				localStorage.setItem("webOnly", webOnly.checked);
+				
 				localStorage.setItem("prefix", prefix.value);
 			}
 		};
 
+		webOnly.addEventListener("change", () => {
+			localStorage.setItem("webOnly", webOnly.checked);
+		});
+		
 		document.getElementById("start").addEventListener("click", start);	
 		
 		document.getElementById("number")
