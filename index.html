@@ -148,12 +148,25 @@ margin-bottom: 0;
 				<input type="number" id="prefix" value="972" tabindex="1"/>
 				<input type="tel" id="number" value="05" tabindex="0" />
 			</div>
-		<fieldset>			
-		  <label>
-		    <input data-tooltip="Directly go to Web (not desktop/native)" data-placement="bottom" name="web" type="checkbox" role="switch" />
+		
+		
+		<fieldset>	
+		 <label>
+			<textarea
+			  name="valid"
+			  aria-invalid="false"
+			  aria-describedby="valid-helper"
+			>			  
+			</textarea>
+			 Optional Text Message
+		 </label>
+		  <label data-tooltip="Directly go to Web (not desktop/native)" data-placement="bottom">
+		    <input name="web" type="checkbox" role="switch" />
 		    Web Only
 		  </label> 
 		</fieldset>
+		
+		
 		<button id="start" class="pico-background-jade-500">Start</button>
 	</article>
 		
@@ -182,8 +195,8 @@ margin-bottom: 0;
 
 			if (prefix.value && num.value){
 				const cleanNum = num.value.replace(/^0/, "").replace(/-/, "");
-				//https://api.whatsapp.com/send?phone=972508322244&text=https://www.digital-electric.co.il/items/2071710
-				window.open(`https://wa.me/${prefix.value}${cleanNum}`);
+				//https:/capi.whatsapp.com/send?phone=00000&text=blabla
+				window.open(`https://api.whatsapp.com/send?phone=${prefix.value}${cleanNum}&text=${text}`);
 			}
 		};
 
