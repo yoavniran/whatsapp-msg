@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
      <link href="wa-small.png" rel="icon" sizes="192x192" type="image/png">
      <link href="wa-small.png" rel="icon" sizes="32x32" type="image/png">
+
+	<link rel="stylesheet"
+  		href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+	/>
 	
     <style>
 	    body {
@@ -146,6 +150,7 @@
 
 			if (prefix.value && num.value){
 				const cleanNum = num.value.replace(/^0/, "").replace(/-/, "");
+				//https://api.whatsapp.com/send?phone=972508322244&text=https://www.digital-electric.co.il/items/2071710
 				window.open(`https://wa.me/${prefix.value}${cleanNum}`);
 			}
 		};
