@@ -20,6 +20,10 @@
 />
 	
     <style>
+	    :root {
+	    	--pico-border-color: #A39E8F;	    
+	    }
+	    
 	    body {
 		    background-color: #D9DBD4;
 		    margin: 0;
@@ -38,6 +42,8 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		box-shadow: -1px 0px 22px -6px rgba(176,173,176,1);
+		    top: 60px;
 	    }
 	    
 /* 			main {
@@ -64,7 +70,7 @@
 			}
 	    
 	    #prefix {
-	    	width: 80px; 
+	    	width: 140px; 
 		    margin-right: 10px;
 	    }
 	    
@@ -86,8 +92,11 @@
 	    header {
 		background-color: #00BFA5;
 		    min-height: 80px;
+		    width: 100%;
+		    
 		       box-sizing: border-box;
     			padding: 12px 0 0 15px;
+		    
 	    }
 	    
 	    #logo {
@@ -105,7 +114,9 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
+margin-bottom: 0;
+		    margin-top: 0;
+			    border-bottom: none;
 			height: 40px;
 			box-sizing: border-box;
 			padding: 10px 0 0 4px;
@@ -137,15 +148,14 @@
 				<input type="number" id="prefix" value="972" tabindex="1"/>
 				<input type="tel" id="number" value="05" tabindex="0" />
 			</div>
-		<fieldset>
-			<button >Bottom</button>
+		<fieldset>			
 		  <label>
 		    <input data-tooltip="Directly go to Web (not desktop/native)" data-placement="bottom" name="web" type="checkbox" role="switch" />
 		    Web Only
 		  </label> 
 		</fieldset>
 		<button id="start" class="pico-background-jade-500">Start</button>
-	</main>
+	</article>
 		
 	<footer>
 		<a href="https://react-uploady.org/docs/yoav/" target="_blank" rel="nofollow">
