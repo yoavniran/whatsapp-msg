@@ -21,7 +21,7 @@
 		    margin: 0;
 	    }
 	    
-			main {
+/* 			main {
 				min-width: 400px;
 				min-height: 500px;
 				display: flex;
@@ -34,7 +34,7 @@
     transform: translateX(-50%);
 				    background-color: #F9F9F9;
 				box-shadow: 0 17px 50px 0 rgba(0,0,0,.19), 0 12px 15px 0 rgba(0,0,0,.24);
-			}
+			} */
 			
     	#start {
 				width: 250px;
@@ -115,7 +115,7 @@
 		<img src="wa.png" alt="logo" id="logo"/>
 	</header>
 
-	<main>
+	<article>
 		<h2>New WhatsApp Message</h2>
 		
 			<div id="num-container">
@@ -123,8 +123,9 @@
 				<input type="tel" id="number" value="05" tabindex="0" />
 			</div>
 		<fieldset>
+			<button >Bottom</button>
 		  <label>
-		    <input name="web" type="checkbox" role="switch" />
+		    <input data-tooltip="Directly go to Web (not desktop/native)" data-placement="bottom" name="web" type="checkbox" role="switch" />
 		    Web Only
 		  </label> 
 		</fieldset>
